@@ -1,6 +1,6 @@
 # Neural Network for Multi-Class Classification
 
-![Università degli Studi del Sannio Logo](resources/Unisannio_logo.png))
+![Università degli Studi del Sannio Logo](resources/Unisannio_logo.png)
 
 This repository contains the implementation of a neural network designed for multi-class classification, developed as part of the **"Web and Information Retrieval"** course at the **Università degli Studi del Sannio**.
 
