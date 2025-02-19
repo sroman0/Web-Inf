@@ -1,23 +1,37 @@
 # Neural Network for Multi-Class Classification
 
-![Università degli Studi del Sannio Logo](resources/Unisannio_logo.png)
+This repository contains the implementation of a neural network designed for multi-class classification, developed as part of the "Web and Information Retrieval" course at the Università degli Studi del Sannio.
 
-This repository contains the implementation of a neural network designed for multi-class classification, developed as part of the **"Web and Information Retrieval"** course at the **Università degli Studi del Sannio**.
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Repository Structure](#repository-structure)
+- [Requirements](#requirements)
+- [Usage](#usage)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Run the Jupyter Notebook (Optional)](#2-run-the-jupyter-notebook-optional)
+  - [3. Execute the Main Script](#3-execute-the-main-script)
+- [Model Architecture](#model-architecture)
+- [Results](#results)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Project Overview
 
-The project focuses on building a neural network with a **softmax activation function** in the final layer, enabling it to handle **multi-class classification tasks** effectively. The implementation includes data preprocessing, model training, evaluation, and visualization of results.
+The project focuses on building a neural network with a softmax activation function in the final layer, enabling it to handle multi-class classification tasks effectively. The implementation includes data preprocessing, model training, evaluation, and visualization of results.
 
 ## Repository Structure
 
-- **`main.py`**: The main script that initializes and trains the neural network model.
-- **`tesina_finale_softmax.ipynb`**: A Jupyter Notebook providing a detailed walkthrough of the project, including data preprocessing, model architecture, training process, and evaluation metrics.
-- **`dataset/`**: Directory containing the dataset used for training and testing.
-- **`models/`**: Directory for saving trained models.
-- **`results/`**: Contains plots and logs of training performance.
-- **`requirements.txt`**: List of dependencies required to run the project.
-- **`LICENSE`**: The project's license information.
-- **`README.md`**: This file, offering an overview of the project.
+```
+Web-Inf/
+├── main.py                  # Main script for model training and evaluation
+├── tesina_finale_softmax.ipynb  # Detailed notebook explaining the project workflow
+├── resources/              # Directory containing datasets and additional resources
+├── results/                # Directory to store training results and figures
+├── .gitignore              # Files and folders to be ignored by git
+├── LICENSE                 # Project license information
+└── README.md               # Project documentation
+```
 
 ## Requirements
 
@@ -34,7 +48,7 @@ To run the code in this repository, ensure you have the following dependencies i
 You can install the required packages using pip:
 
 ```bash
-pip install -r requirements.txt
+pip install tensorflow numpy pandas scikit-learn matplotlib jupyter
 ```
 
 ## Usage
@@ -48,7 +62,7 @@ cd Web-Inf
 
 ### 2. Run the Jupyter Notebook (Optional)
 
-If you want to explore the Jupyter Notebook:
+To explore the project workflow in an interactive environment:
 
 ```bash
 jupyter notebook tesina_finale_softmax.ipynb
@@ -62,32 +76,34 @@ To train and evaluate the model, run:
 python main.py
 ```
 
-Ensure that the dataset is properly referenced within the script.
+Ensure that the dataset is correctly referenced within the script and that the `resources/` directory contains the necessary data files.
 
 ## Model Architecture
 
-The implemented neural network consists of multiple layers:
+The implemented neural network consists of:
 
-1. **Input Layer**: Accepts preprocessed feature vectors.
-2. **Hidden Layers**: Multiple dense layers with activation functions (ReLU) to capture complex patterns.
+1. **Input Layer**: Processes preprocessed feature vectors.
+2. **Hidden Layers**: Multiple dense layers with ReLU activation functions to capture complex patterns.
 3. **Output Layer**: Softmax activation function for multi-class classification.
 
-The network is trained using **categorical cross-entropy loss** and optimized with **Adam optimizer**. The model's performance is evaluated using accuracy metrics and visualized through learning curves.
+The network is optimized using the Adam optimizer and uses categorical cross-entropy as the loss function. Model performance is tracked using accuracy metrics.
 
 ## Results
 
-- Model performance is evaluated based on **accuracy, loss, and confusion matrix**.
-- Training history is visualized using **Matplotlib** to track accuracy and loss over epochs.
-- Results are stored in the `results/` directory.
+- **Accuracy & Loss Plots**: Training history is visualized to assess model convergence.
+- **Confusion Matrix**: Provides insights into class-wise prediction accuracy.
+- **Evaluation Metrics**: Detailed performance metrics, including precision, recall, and F1-score.
+- All generated results and plots are saved in the `results/` directory.
 
 ## License
 
-This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **GNU General Public License v3.0**.  
+See the [LICENSE](https://github.com/sroman0/Web-Inf/blob/main/LICENSE) file for more details.
 
 ## Acknowledgments
 
-This project was developed as part of the **Web and Information Retrieval** course at **Università degli Studi del Sannio**. Special thanks to the course instructors and colleagues for valuable insights.
+This project was developed as part of the *"Web and Information Retrieval"* course at **Università degli Studi del Sannio**. Special thanks to the course instructors and fellow students for their valuable guidance and support.
 
 ---
 
-For any questions or further information, please contact the repository owner or refer to the course materials provided by the Università degli Studi del Sannio.
+For questions or further information, please contact the repository maintainer or refer to the course materials provided by the university.
